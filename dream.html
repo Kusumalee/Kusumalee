@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage.js dowebok</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+#menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+#menu .active a { color: #fff; background-color: #333;}
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+		menu: '#menu'
+	});
+});
+</script>
+</head>
+
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">Top 3 Social Media In Thai</a></li>
+	<li data-menuanchor="page2"><a href="#page2">Social Media Status in Thai by month</a></li>
+	<li data-menuanchor="page3"><a href="#page3">Advertising Media</a></li>
+	<li data-menuanchor="page4"><a href="#page4">Weekly Online</a></li>
+</ul>
+
+<div id="dowebok">
+	<div class="section">
+		
+		<iframe src="https://plotdb.io/v/chart/21053#" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+	</div>
+	<div class="section">
+		<iframe src="https://kusumalee.github.io/Kusumalee/Social-Media-Status-in-Thai-by-month.html" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+		
+	</div>
+	<div class="section">
+		<iframe src="https://plotdb.io/v/chart/21052#" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+		
+	</div>
+	<div class="section">
+		<iframe src="https://kusumalee.github.io/Kusumalee/Weekly-Online.html" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+		
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
